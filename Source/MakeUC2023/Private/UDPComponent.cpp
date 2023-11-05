@@ -20,7 +20,7 @@ void UUDPComponent::BeginPlay()
 	Super::BeginPlay();
 	WSADATA wsaData;
 	WSAStartup(MAKEWORD(2, 2), &wsaData);
-	SOCKET udpSocket = socket(AF_INET, SOCK_DGRAM, 0);
+	udpSocket = socket(AF_INET, SOCK_DGRAM, 0);
 	serverAddress.sin_family = AF_INET;
 	serverAddress.sin_port = htons(serverPort);
 	serverAddress.sin_addr.s_addr = inet_addr(serverIP);

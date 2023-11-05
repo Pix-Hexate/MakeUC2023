@@ -3,7 +3,11 @@
 #pragma once
 
 #include <iostream>
+#define _WINSOCK_DEPRECATED_NO_WARNINGS  
 #include <winsock2.h>
+#pragma comment(lib, "ws2_32.lib")
+#pragma comment(lib, "WSock32.lib")
+
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
